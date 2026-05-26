@@ -1,0 +1,45 @@
+name: Docs Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required docs
+        run: |
+          test -f README.md
+          test -f docs/architecture.md
+          test -f docs/protocol.md
+          test -f docs/roadmap.md
+          test -f docs/safety.md
+          test -f docs/development.md
+          test -f docs/wiring/face_gc9a01.md
+          test -f docs/wiring/head_servos.md
+          test -f docs/wiring/motors.md
+          test -f docs/wiring/power.md
+          test -f docs/hardware/overview.md
+          test -f docs/hardware/bill_of_materials.md
+          test -f docs/hardware/power_architecture.md
+          test -f docs/hardware/wiring_conventions.md
+          test -f docs/hardware/pinout_raspberry.md
+          test -f docs/hardware/pinout_face_esp32.md
+          test -f docs/hardware/pinout_head_esp32.md
+          test -f docs/hardware/pinout_motor_esp32.md
+          test -f docs/hardware/pinout_lights_esp32.md
+          test -f docs/hardware/connectors.md
+          test -f docs/deployment/raspberry_setup.md
+          test -f docs/deployment/python_environment.md
+          test -f docs/deployment/systemd_services.md
+          test -f docs/deployment/platformio_setup.md
+          test -f docs/deployment/flashing_firmware.md
+          test -f docs/deployment/serial_devices.md
+          test -f docs/deployment/logs.md
+          test -f docs/deployment/troubleshooting.md
+          test -f docs/operations/startup_shutdown.md
+          test -f docs/operations/safety_checklist.md
+          test -f docs/operations/test_procedures.md
+          test -f docs/operations/maintenance.md

@@ -1,0 +1,8 @@
+name: Robotin
+mode: development
+safety:
+  heartbeat_timeout_ms: 1000
+  max_motor_power: 0.5
+simulation:
+  enabled_by_default: true
+

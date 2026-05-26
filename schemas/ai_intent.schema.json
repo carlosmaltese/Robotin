@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Robotin AI Intent",
+  "type": "object",
+  "required": ["utterance", "emotion", "gaze", "priority"],
+  "properties": {
+    "utterance": {"type": "string"},
+    "emotion": {"type": "string"},
+    "gaze": {"type": "string"},
+    "mouth": {"type": "string"},
+    "head": {
+      "type": "object",
+      "properties": {
+        "gesture": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "lights": {
+      "type": "object",
+      "properties": {
+        "mode": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "priority": {"enum": ["low", "normal", "high", "emergency"]}
+  },
+  "additionalProperties": false
+}
+

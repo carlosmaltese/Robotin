@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Robotin Event",
+  "type": "object",
+  "required": ["type", "subsystem"],
+  "properties": {
+    "type": {"type": "string"},
+    "subsystem": {"type": "string"},
+    "payload": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
+

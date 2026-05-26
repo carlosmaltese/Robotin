@@ -1,0 +1,29 @@
+devices:
+  face:
+    subsystem: FACE
+    transport: serial
+    port: null
+    baudrate: 115200
+    heartbeat_ms: 500
+    simulation: true
+  head:
+    subsystem: HEAD
+    transport: serial
+    port: null
+    baudrate: 115200
+    heartbeat_ms: 500
+    simulation: true
+  motor:
+    subsystem: MOTOR
+    transport: serial
+    port: null
+    baudrate: 115200
+    heartbeat_ms: 500
+    simulation: true
+  lights:
+    subsystem: LIGHT
+    transport: serial
+    port: null
+    baudrate: 115200
+    heartbeat_ms: 500
+    simulation: true
